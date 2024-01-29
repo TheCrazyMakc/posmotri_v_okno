@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -36,3 +39,142 @@ ul,
 ol {
   list-style: none;
 }
+
+/* let's start */
+
+/* blocks */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.content__list {
+  height: 298px;
+  overflow-y: auto;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.result {
+  width: 711px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 78px;
+}
+
+.result__video {
+  object-fit: contain;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video-container {
+  gap: 16px;
+}
+
+.content__details {
+  width: 399px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.content__list-item {
+  width: 394px;  
+}
+
+.content__video-card {
+  display: flex;  
+}
+
+.content__video-card-thumbnail {
+  object-fit: contain;
+  width: 194px;
+  height: 103px;
+
+}
+
+/* checkbox */
+.search-form__fieldset {
+  width: 225px;
+  height: 54px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+/* fonts */
+.title {
+  color: #FFF;
+font-family: Oswald;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: 94%;
+text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+font-family: Oswald;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: 94%; /* 70.5px */
+text-transform: uppercase;
+}
+
+.content__video-card-title {
+  color: #FFF;
+font-family: Oswald;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 30px */
+text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #FFF;
+font-family: "Fira Sans Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.2px; /* 90% */
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+font-family: "Fira Sans Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.button {
+  width: 194px;
+  height: 34px;
+  color: #FFF;
+  background-color: transparent;
+text-align: center;
+font-family: "Fira Sans Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: 1px solid white;
+} 
