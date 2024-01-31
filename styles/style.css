@@ -51,6 +51,7 @@ ol {
 }
 
 .content__list {
+  position: relative;
   height: 298px;
   overflow-y: auto;
   margin-top: 26px;
@@ -58,6 +59,16 @@ ol {
   flex-direction: column;
   gap: 30px;
 }
+
+/* убрал скрол у карточек */
+.content__list::-webkit-scrollbar { 
+  width: 0; 
+}
+
+.content { 
+  -ms-overflow-style: none;
+}
+
 
 .result {
   width: 711px;
@@ -68,12 +79,16 @@ ol {
 
 .result__video {
   object-fit: contain;
-  width: 711px;
+  width: 711px;  
   height: 386px;
 }
 
 .result__video-container {
+  position: relative;
   gap: 16px;
+  /* inline-size: 711px; */
+  width: 711px;
+  height: 386px;
 }
 
 .content__details {
@@ -92,7 +107,8 @@ ol {
 }
 
 .content__video-card {
-  display: flex;  
+  display: flex;
+  justify-content: space-between;
 }
 
 .content__video-card-thumbnail {
