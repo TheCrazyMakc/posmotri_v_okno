@@ -11,7 +11,7 @@
 
  * https://github.com/TheCrazyMakc/posmotri_v_okno
 
- * [Проект: Оно-тебе-надо](https://thecrazymakc.github.io/posmotri_v_okno/)
+ * [Проект: Посмотри в окно](https://thecrazymakc.github.io/posmotri_v_okno/)
 
 
 **Figma**
