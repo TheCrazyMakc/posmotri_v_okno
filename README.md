@@ -1,5 +1,4 @@
 # Проект: Посмотри в окно
-
 ### Используемые технологии
 * HTML
 * CSS (flexbox)
@@ -10,7 +9,9 @@
 
 автор работы: Соловьев Максим
 
- https://thecrazymakc.github.io/posmotri_v_okno/
+ * https://github.com/TheCrazyMakc/posmotri_v_okno
+
+ * [Проект: Оно-тебе-надо](https://thecrazymakc.github.io/posmotri_v_okno/)
 
 
 **Figma**
