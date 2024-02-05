@@ -56,18 +56,19 @@ ol {
   overflow-y: auto;
   margin-top: 26px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 /* убрал скрол у карточек - но на ревью попросили убрать это
 .content__list::-webkit-scrollbar {
   width: 0;
 }
-*/
+
 
 .content {
   -ms-overflow-style: none;
 }
+*/
 
 .result {
   width: 100%;
@@ -375,7 +376,7 @@ ol {
 */
 
 .content__video-card:focus {
-  outline: 0px;
+  outline: none;
 }
 
 .content__video-card:has(:focus-visible) {
