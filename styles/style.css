@@ -204,20 +204,20 @@ ol {
 
 /* button */
 .more-button {
-  width: 399px;
-  height: 39px;
+  width: 100%;
+  min-height: 39px;
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
+  min-height: 34px;
   align-self: end;
 }
 
 /* checkbox */
 .search-form__fieldset {
-  width: 225px;
-  height: 54px;
+  min-width: 225px;
+  min-height: 54px;
   border: none;
   align-self: end;  
 }
