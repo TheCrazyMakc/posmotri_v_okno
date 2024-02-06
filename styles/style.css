@@ -106,6 +106,7 @@ ol {
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
+  padding-bottom: 3px;
 }
 
 .content__list-item {
@@ -212,7 +213,7 @@ ol {
 .search-form__submit-button {
   min-width: 194px;
   min-height: 34px;
-  align-self: end;
+  align-self: end;  
 }
 
 /* checkbox */
@@ -223,9 +224,11 @@ ol {
   align-self: end;  
 }
 
+/*
 .search-form__fieldset:nth-child(even) {
   margin-bottom: 5px;
 }
+*/
 
 /* search */
 .search-form__textfield {
@@ -268,7 +271,9 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 15px; 
+  padding-top: 2px;
+  padding-left: 5px;  
 }
 
 .search-form__label {
