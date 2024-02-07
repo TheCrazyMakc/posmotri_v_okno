@@ -48,15 +48,18 @@ ol {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-left: 13px;
 }
 
 .content__list {
   position: relative;
+  min-width: 399px;
   height: 298px;
   overflow-y: auto;
   margin-top: 26px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;   
+   
 }
 
 /* убрал скрол у карточек - но на ревью попросили убрать это
@@ -97,11 +100,10 @@ ol {
 }
 
 .content__details {
-  width: 399px;
+  width: 100%;
 }
 
-.search-form {
-  height: 54px;
+.search-form {  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +112,7 @@ ol {
 }
 
 .content__list-item {
-  width: 394px;
+  min-width: 398px;
 }
 
 .content__video-card {
@@ -154,8 +156,10 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
-  /* 30px */
   text-transform: uppercase;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
 }
 
 .content__video-card-description {
@@ -181,6 +185,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-left: 10px;
 }
 
 .button {
@@ -193,6 +198,7 @@ ol {
   font-weight: 700;
   line-height: normal;
   border: 1px solid white;
+  min-height: 34px;
 }
 
 .search-form__label-text {
@@ -206,14 +212,13 @@ ol {
 
 /* button */
 .more-button {
-  width: 100%;
-  min-height: 39px;
+  width: 100%;  
 }
 
 .search-form__submit-button {
-  min-width: 194px;
-  min-height: 34px;
+  min-width: 194px;  
   align-self: end;  
+  
 }
 
 /* checkbox */
@@ -233,7 +238,7 @@ ol {
 /* search */
 .search-form__textfield {
   min-width: 228px;
-  color: rgba(255, 255, 255, 0.7); /* в ревью написано, что цвет должен быть белый. не понимаю, что нужно поменять */
+  color: rgb(255, 255, 255); 
   font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -245,6 +250,7 @@ ol {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   appearance: none;
+  padding: 0;
 }
 
 .search-form__fieldset-title {
@@ -269,10 +275,10 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+ /* flex-direction: row;
+  align-items: center;*/
   column-gap: 15px; 
-  padding-top: 2px;
+  
   padding-left: 5px;  
 }
 
@@ -368,7 +374,9 @@ ol {
 }
 
 .content__card-link {
-  background-color: #545050;
+  text-decoration: none;
+  display: block;
+  margin: 3px;  
 }
 
 .content__video-card:active {
@@ -394,7 +402,16 @@ ol {
 
 .content__video-card:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 1px;  
   
 }
 
+.search-form__fieldset-title:first-child {
+  padding-left: 0;
+}
+
+/*
+li:last-child {
+  padding-bottom: 2px;
+}
+*/
