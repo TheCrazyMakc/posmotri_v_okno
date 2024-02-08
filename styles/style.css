@@ -214,6 +214,7 @@ ol {
 /* button */
 .more-button {
   width: 100%;  
+  margin-bottom: 3px;
 }
 
 .search-form__submit-button {
