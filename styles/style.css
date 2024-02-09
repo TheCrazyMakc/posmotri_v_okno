@@ -392,7 +392,7 @@ ol {
 }
 
 .result__video-container:focus {
-  outline: none;
+  outline: none;  
 }
 
 .result__video-container:has(:focus-visible) {
