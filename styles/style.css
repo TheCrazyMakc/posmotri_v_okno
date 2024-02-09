@@ -335,7 +335,6 @@ ol {
 .search-form__textfield:focus {
   outline: none;
   box-shadow: none;
-  border: none;
 }
 
 .search-form__pseudo-checkbox {  
