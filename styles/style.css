@@ -41,15 +41,22 @@ ol {
 }
 
 /* let's start */
+/* чтобы скрыть правый скролл */
+/*.content__list {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
+.content__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+*/
 /* blocks */
 .content {
   display: flex;
   align-items: flex-end;
-  /*
-  justify-content: center;
-  align-items: center;
-  */
   gap: 30px;
 }
 
@@ -57,23 +64,10 @@ ol {
   position: relative;
   min-width: 399px;
   height: 298px;
-  overflow-y: auto;
-  margin-top: 26px;
+  overflow-y: auto;  
   display: flex;
-  flex-direction: column;   
-   
+  flex-direction: column;      
 }
-
-/* убрал скрол у карточек - но на ревью попросили убрать это
-.content__list::-webkit-scrollbar {
-  width: 0;
-}
-
-
-.content {
-  -ms-overflow-style: none;
-}
-*/
 
 .result {
   display: flex;
@@ -81,36 +75,37 @@ ol {
   gap: 16px;
 }
 
-
 .result__video {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-  object-position: center;
-  /*object-fit: contain;
-  width: 100%;
-  height: 386px;*/
+  object-position: center; 
 }
 
 .result__video-container {
-  position: relative;
-  
-  /* inline-size: 711px; */
+  position: relative; 
   width: 711px;
   height: 386px;
 }
 
 .content__details {
-  width: 100%;
+  /*width: 100%;*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
 }
 
 .search-form {  
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;  */
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
 }
 
-.content__list-item {
+.content__list-item {  
   min-width: 398px;
 }
 
@@ -145,7 +140,6 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: 94%;
-  /* 70.5px */
   text-transform: uppercase;
 }
 
@@ -169,7 +163,6 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px;
-  /* 90% */
   margin-top: 6px;
 }
 
@@ -186,6 +179,7 @@ ol {
   line-height: normal;
 }
 
+/* button */
 .button {
   color: #FFF;
   background-color: transparent;
@@ -196,7 +190,37 @@ ol {
   font-weight: 700;
   line-height: normal;
   border: 1px solid white;
-  min-height: 34px;
+  min-height: 34px;  
+}
+
+.button:hover {
+  border: 1px solid #fff;
+  text-decoration: underline;
+}
+
+.button:active {
+  border: 1px solid #fff;
+  background: #545050;
+  text-decoration: none;
+}
+
+.more-button {
+  width: 100%;  
+  margin-bottom: 3px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;  
+  align-self: end;    
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__label-text {
@@ -208,25 +232,18 @@ ol {
   line-height: normal;
 }
 
-/* button */
-.more-button {
-  width: 100%;  
-  margin-bottom: 3px;
-}
-
-.search-form__submit-button {
-  min-width: 194px;  
-  align-self: end;  
-  
-}
-
 /* checkbox */
 .search-form__fieldset {
+  /*border: none;
+  align-self: end;  */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: none;
-  align-self: end;  
 }
 
-/* search */
+/* search 118#*/
 .search-form__textfield {
   min-width: 228px;
   color: rgb(255, 255, 255); 
@@ -261,10 +278,25 @@ ol {
   column-gap: 15px;     
 }
 
-.search-form__label {
+.search-form__label {  
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 5px;
   width: fit-content;
+  appearance: none;
+}
+
+.search-form__label:hover {
+  text-decoration: underline 1px #fff;
+  text-underline-offset: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;  
+}
+
+.search-form__label:focus {
+  outline: none;
 }
 
 .search-form__label,
@@ -274,38 +306,13 @@ ol {
 .more-button {
   cursor: pointer;
 }
-
-.button:hover {
-  border: 1px solid #fff;
+/*
+.search-form__label-text {
   text-decoration: underline;
 }
-
-.button:active {
-  border: 1px solid #fff;
-  background: #545050;
-  text-decoration: none;
-}
-
-.button:focus {
-  outline: 0;
-}
-
-.button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
-.search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
-}
-
+*/
 .search-form__label-text:focus {
   outline: 0px;
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__textfield:focus {
@@ -315,19 +322,27 @@ ol {
 }
 
 .search-form__pseudo-checkbox {  
-  position: relative;
-  display: flex;
+  /*position: relative;
+  display: flex;*/
+  display: block;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;  
 }
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
-  content: '';
+  /*content: '';
   background-color: #fff;
   width: 15px;
   height: 15px;
-  margin: 1px;
+  margin: 1px;*/
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  inline-size: 15px;
+  block-size: 15px;
+  margin: 1px 0 0 1px;
 }
 
 .search-form__checkbox:has(:focus-visible) {
@@ -372,6 +387,15 @@ ol {
 }
 
 .content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.result__video-container:focus {
+  outline: none;
+}
+
+.result__video-container:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
