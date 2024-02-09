@@ -88,6 +88,24 @@ ol {
   height: 386px;
 }
 
+.result__video:focus {
+  outline: none;  
+}
+
+.result__video:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.result__video-container:focus {
+  outline: none;  
+}
+
+.result__video-container:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .content__details {
   /*width: 100%;*/
   display: flex;
@@ -205,8 +223,7 @@ ol {
 }
 
 .more-button {
-  width: 100%;  
-  margin-bottom: 3px;
+  width: 100%;    
 }
 
 .search-form__submit-button {
@@ -391,11 +408,3 @@ ol {
   outline-offset: 1px;
 }
 
-.result__video-container:focus {
-  outline: none;  
-}
-
-.result__video-container:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
