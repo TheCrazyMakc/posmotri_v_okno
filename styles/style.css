@@ -55,8 +55,7 @@ ol {
 */
 /* blocks */
 .content {
-  width: 1140px;
-  height: 534px;
+  width: 1140px;  
   display: flex;
   align-items: flex-end;
   gap: 30px;
