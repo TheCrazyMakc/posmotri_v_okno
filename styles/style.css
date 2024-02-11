@@ -55,6 +55,8 @@ ol {
 */
 /* blocks */
 .content {
+  width: 1140px;
+  height: 534px;
   display: flex;
   align-items: flex-end;
   gap: 30px;
@@ -66,7 +68,8 @@ ol {
   height: 298px;
   overflow-y: auto;  
   display: flex;
-  flex-direction: column;      
+  flex-direction: column;   
+   margin-bottom: 1px;
 }
 
 .result {
@@ -214,6 +217,7 @@ ol {
 .button:hover {
   border: 1px solid #fff;
   text-decoration: underline;
+  
 }
 
 .button:active {
@@ -237,7 +241,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: -3px;
 }
 
 .search-form__label-text {
